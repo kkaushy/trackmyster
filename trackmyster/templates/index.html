@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block script %}
+
+	<link rel="stylesheet" type="text/css" href= "{% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+	<!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/> -->
+	<link rel="stylesheet" href="{% static 'bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css' %}"/>
+	<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'bower_components/moment/moment.js' %}"></script>
+	<script src="{% static 'bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+	
+
+	
+	<script type="text/javascript">
+
+		$(document).ready(function(){			
+		
+		});
+
+		
+
+	</script>
+{% endblock %}
+{% block style %}
+{% endblock %}	
+
+
+<div>
+    <div>
+    	{% block content%}
+        <div class="modal-content">	            
+            <div class="modal-body">	                
+            content
+            </div>	            
+        </div>
+        {% endblock %}
+    </div>
+</div>
