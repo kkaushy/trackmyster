@@ -1,4 +1,4 @@
-trackmysterApp = angular.module('trackmysterApp',['ui.router','daterangepicker']).
+trackmysterApp = angular.module('trackmysterApp',['ui.router','daterangepicker','google-maps']).
 	config(function($stateProvider, $urlRouterProvider){
 
 	  $urlRouterProvider.otherwise("");	  

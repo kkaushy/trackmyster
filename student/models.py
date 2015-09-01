@@ -21,3 +21,11 @@ class Travel(models.Model):
 
 	def __unicode__(self):
 		return str(self.student)
+
+class Bus(models.Model):
+	
+	bus_no = models.CharField(max_length=5)
+	device_id = models.CharField(max_length=50)	
+
+	def __unicode__(self):
+		return str(self.bus_no)

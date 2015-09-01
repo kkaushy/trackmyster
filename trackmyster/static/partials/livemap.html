@@ -1,3 +1,23 @@
-<div>
-	{{title}}
+<style type="text/css">
+	.angular-google-map-container { height: 400px; }
+</style>
+<div class="angular-google-map-container">
+	<google-map 
+      id="map-canvas"
+      center="map.center"
+      zoom="map.zoom"
+      draggable="true"
+      dragging="map.dragging"
+      options="map.options"
+    >
+      <polyline ng-repeat="p in map.polylines" 
+                path="p.path"
+                stroke="p.stroke" 
+                visible='p.visible'
+                geodesic='p.geodesic' 
+                fit="false"
+                editable="p.editable" 
+                draggable="p.draggable">
+      </polyline>
+    </google-map>
 </div>
