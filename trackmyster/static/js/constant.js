@@ -1,4 +1,4 @@
-lmsApp.constant("constant",{
+trackmysterApp.constant("constant",{
 	"leaves": {
 		"EL": "Earned Leave",
 		"SL": "Sick Leave",

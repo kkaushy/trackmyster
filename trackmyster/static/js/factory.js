@@ -1,4 +1,4 @@
-lmsApp.factory('leaveFactory', function($http){
+trackmysterApp.factory('leaveFactory', function($http){
 	var urlBase = '/api/leave/';
 	var _leaveService = {};
 
@@ -21,7 +21,7 @@ lmsApp.factory('leaveFactory', function($http){
 	return _leaveService;
 });
 
-lmsApp.factory('leaveBalanceFactory', function($http){
+trackmysterApp.factory('leaveBalanceFactory', function($http){
 	var urlBase = '/api/leavebalance';
 	var _leaveBalanceService = {};
 
@@ -36,7 +36,7 @@ lmsApp.factory('leaveBalanceFactory', function($http){
 	return _leaveBalanceService;
 });
 
-lmsApp.factory('categoryFactory', function($http){
+trackmysterApp.factory('categoryFactory', function($http){
 	var urlBase = '/api/category';
 	var _categoryService = {};
 
@@ -46,7 +46,7 @@ lmsApp.factory('categoryFactory', function($http){
 	return _categoryService;
 });
 
-lmsApp.factory('employeeFactory', function($http){
+trackmysterApp.factory('employeeFactory', function($http){
 	var urlBase = '/api/employee';
 	var _employeeService = {};
 

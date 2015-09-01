@@ -9,35 +9,51 @@
 
 	<!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/> -->
 	<link rel="stylesheet" href="{% static 'bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css' %}"/>
+
 	<script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'bower_components/angular/angular.js' %}"></script>
+	<script type="text/javascript" src="{% static 'bower_components/angular-ui-router.js' %}"></script>
 	<script src="{% static 'bower_components/moment/moment.js' %}"></script>
+	<script src="{% static 'bower_components/angular-moment/angular-moment.js' %}"></script>
 	<script src="{% static 'bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
-	
+	<script src="{% static 'bower_components/angular-daterangepicker/js/angular-daterangepicker.js' %}"></script>
 
+	<script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/factory.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/controller.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/constant.js' %}"></script>
 	
 	<script type="text/javascript">
 
 		$(document).ready(function(){			
-		
+			// $("#myModal").modal({
+			// 	keyboard: false,
+			// });
 		});
 
-		
+		trackmysterApp.config(function($httpProvider) {			
+			$httpProvider.defaults.headers.common['X-CSRF-TOKEN'] = '{{csrf_token}}';			
+		});
 
 	</script>
 {% endblock %}
 {% block style %}
 {% endblock %}	
+{% block navbar %}
 
+{% endblock %}
 
-<div>
-    <div>
-    	{% block content%}
-        <div class="modal-content">	            
-            <div class="modal-body">	                
-            content
-            </div>	            
-        </div>
-        {% endblock %}
-    </div>
-</div>
+{% block content%}
+	    
+
+	<div id="myModal">
+	    <div>
+	        <div class="modal-content">	            
+	            <div class="modal-body">
+	                <div ui-view></div>
+	            </div>	            
+	        </div>
+	    </div>
+	</div>
+{% endblock %}

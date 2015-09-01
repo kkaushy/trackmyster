@@ -9,16 +9,16 @@
 		{% endblock %}	
 	</head>
 	<body>
-		<div class="container" >
+		<div class="container" ng-app="trackmysterApp">
 			{% block navigation %}
 				<div class="modal-header">
 	                <nav class="navbar navbar-default">
 					  <div class="container-fluid">					    
-					      <ul class="nav navbar-nav">        
-					        <li><a href="home#">Home</a></li>
-					        <li><a href="livemap#">Live Map</a></li> 
-					        <li><a href="routehistory#">Route history</a></li> 
-					        <li><a href="attendance#">Attendance Report</a></li> 
+					      <ul class="nav navbar-nav">
+					        <li><a ui-sref="home">Home</a></li>
+					        <li><a ui-sref="livemap">Live Map</a></li> 
+					        <li><a ui-sref="routehistory">Route history</a></li> 
+					        <li><a ui-sref="attendance">Attendance Report</a></li> 
 					      </ul>					    
 					  </div>
 					</nav>	                

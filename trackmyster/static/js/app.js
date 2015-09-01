@@ -1,23 +1,26 @@
-lmsApp = angular.module('lmsApp',['ui.router','daterangepicker']).
+trackmysterApp = angular.module('trackmysterApp',['ui.router','daterangepicker']).
 	config(function($stateProvider, $urlRouterProvider){
 
 	  $urlRouterProvider.otherwise("");	  
 	  $stateProvider
-	    .state('main', {
+	    .state('home', {
 	      url: "",
-	      templateUrl: "/static/partials/leaveDetails.html",
-	      controller:'leaveDetailsCtrl'
+	      templateUrl: "/static/partials/home.html",
+	      controller:'homeCtrl'
 	    })
-	    .state('newLeave', {
+	    .state('livemap', {
 	      url: "2",
-	      templateUrl: "/static/partials/newLeave.html",
-	      controller:'newLeaveCtrl'
+	      templateUrl: "/static/partials/livemap.html",
+	      controller:'liveMapCtrl'
 	    })
-	    .state('memoirs', {
+	    .state('routehistory', {
 	      url: "3",
-	      templateUrl: "/static/partials/memoirs.html",
-	      controller:'memoirsCtrl'
+	      templateUrl: "/static/partials/routehistory.html",
+	      controller:'routeHistoryCtrl'
+	    })
+	    .state('attendance', {
+	      url: "4",
+	      templateUrl: "/static/partials/attendance.html",
+	      controller:'attendanceCtrl'
 	    })
 	});
-
-lmsApp.value('empId', '1023');
