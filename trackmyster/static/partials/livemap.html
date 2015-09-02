@@ -1,3 +1,8 @@
+<div>
+	<ul>
+		<li ng-repeat="bus in busList">{{bus.bus_no}}</li>
+	</ul>
+</div>
 <div class="angular-google-map-container">
 	<map zoom="13" center="{{loc[0]}}" map-type-id="TERRAIN">
   		<shape name="polyline" path={{loc}} geodesic="true" stroke-color="#131540" stroke-opacity="0.5" stroke-weight="5" static=true>  		

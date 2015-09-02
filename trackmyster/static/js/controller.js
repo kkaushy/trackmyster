@@ -4,8 +4,10 @@ trackmysterApp.controller("homeCtrl", function($scope){
 
 });
 
-trackmysterApp.controller("liveMapCtrl", function($scope){
-
+trackmysterApp.controller("liveMapCtrl", function($scope, busFactory){
+	busFactory.getBusList().then(function(response){
+		$scope.busList = response.data;
+	})
 	$scope.title = "Live Map";
   $scope.loc=[
       [18.638529,73.847787],
