@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from student.models import Student, Travel
+from student.models import Student, Bus, Activity
+from rest_framework_mongoengine.serializers import DocumentSerializer
 
 class StudentSerializer(serializers.ModelSerializer):
 
@@ -7,6 +8,12 @@ class StudentSerializer(serializers.ModelSerializer):
         model = Student
 
 
-class TravelSerializer(serializers.ModelSerializer):
+class BusSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Travel
+        model = Bus
+
+
+class ActivitySerializer(DocumentSerializer):
+    class Meta:
+        model = Activity
+

@@ -5,6 +5,8 @@ urlpatterns = [
     
     url(r'^student/$', views.StudentList.as_view()),
     url(r'^student/(?P<pk>[0-9]+)/$', views.StudentDetail.as_view()),    
-    url(r'^travel/$', views.TravelList.as_view()),
-    url(r'^travel/(?P<pk>[0-9]+)/$', views.TravelDetail.as_view()),
+    url(r'^bus/$', views.BusList.as_view()),
+    url(r'^bus/(?P<pk>[0-9]+)/$', views.BusDetail.as_view()),
+    url(r'^activity/$', views.ActivityList.as_view()),
+    url(r'^activity/(?P<pk>[0-9]+)/$', views.ActivityDetail.as_view()),
 ]
