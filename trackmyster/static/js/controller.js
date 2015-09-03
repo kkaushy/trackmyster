@@ -15,8 +15,17 @@ trackmysterApp.controller("liveMapCtrl", function($scope, busFactory){
       [18.637055,73.825679],
       [18.646896,73.814435]
     ];
-})
 
+    // var waypts = [];
+
+    // // stop = new google.maps.LatLng(18.637055, 73.825679)
+    // waypts.push({
+    //     location: "pune"        
+    // });
+
+
+    // $scope.x = waypts;
+})
 trackmysterApp.controller("routeHistoryCtrl", function($scope){
 	
 	$scope.title = "Route History";

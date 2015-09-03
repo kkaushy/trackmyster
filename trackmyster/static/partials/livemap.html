@@ -5,7 +5,10 @@
 </div>
 <div class="angular-google-map-container">
 	<map zoom="13" center="{{loc[0]}}" map-type-id="TERRAIN">
-  		<shape name="polyline" path={{loc}} geodesic="true" stroke-color="#131540" stroke-opacity="0.5" stroke-weight="5" static=true>  		
+  		<!-- <shape name="polyline" path={{loc}} geodesic="true" stroke-color="#131540" stroke-opacity="0.5" stroke-weight="5" static=true>  		 -->
+
+  		<directions draggable="true" panel="directions-panel" origin="{{loc[0]}}" destination="{{loc[1]}}"></directions>
+  		<directions draggable="true" panel="directions-panel" origin="{{loc[1]}}" destination="{{loc[2]}}"></directions>
   	</shape>
   	</map>
 </div>
