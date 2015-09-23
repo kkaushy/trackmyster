@@ -1,60 +1,62 @@
-trackmysterApp.factory('leaveFactory', function($http){
-	var urlBase = '/api/leave/';
-	var _leaveService = {};
+trackmysterApp.factory('studentFactory', function($http){
+	var urlBase = '/api/student/';
+	var _studentService = {};
 
-	_leaveService.getLeaves = function(empId){
-		if(empId){			
-			return $http.get(urlBase+empId);
+	_studentService.getStudents = function(studentId){
+		if(studentId){			
+			return $http.get(urlBase+studentId);
 		}
 		return $http.get(urlBase);
 	}
 
-	_leaveService.createLeave = function(Leave){
-		return $http.post(urlBase, Leave);
+	_studentService.createStudent = function(Student){
+		return $http.post(urlBase, Student);
 	}
 
-	_leaveService.deleteLeave = function(Leave){
-		return $http.delete(urlBase+Leave.id);
+	_studentService.deleteStudent = function(Student){
+		return $http.delete(urlBase+Student.id);
 	}
 	
 
-	return _leaveService;
+	return _studentService;
 });
 
-trackmysterApp.factory('leaveBalanceFactory', function($http){
-	var urlBase = '/api/leavebalance';
-	var _leaveBalanceService = {};
+trackmysterApp.factory('busFactory', function($http){
+	var urlBase = '/api/bus/';
+	var _busService = {};
 
-	_leaveBalanceService.getLeaveBalanceList = function(empId){
-		return $http.get(urlBase+"/"+empId);
-	}
-
-	_leaveBalanceService.createLeaveBalance = function(message){
-		return $http.post(urlBase, message);
-	}
-
-	return _leaveBalanceService;
-});
-
-trackmysterApp.factory('categoryFactory', function($http){
-	var urlBase = '/api/category';
-	var _categoryService = {};
-
-	_categoryService.getCategories = function(){
+	_busService.getBusList = function(busId){
+		if(busId)
+			return $http.get(urlBase+busId);
 		return $http.get(urlBase);
 	}
-	return _categoryService;
-});
 
-trackmysterApp.factory('employeeFactory', function($http){
-	var urlBase = '/api/employee';
-	var _employeeService = {};
-
-	_employeeService.getEmployee = function(empId){
-		if(empId){
-			return $http.get(urlBase+"/"+empId);
-		}
-		return $http.get(urlBase);
+	_busService.createBus = function(Bus){
+		return $http.post(urlBase, Bus);
 	}
-	return _employeeService;
+
+	return _busService;
 });
+
+// trackmysterApp.factory('categoryFactory', function($http){
+// 	var urlBase = '/api/category';
+// 	var _categoryService = {};
+
+// 	_categoryService.getCategories = function(){
+// 		return $http.get(urlBase);
+// 	}
+// 	return _categoryService;
+// });
+
+// trackmysterApp.factory('employeeFactory', function($http){
+// 	var urlBase = '/api/employee';
+// 	var _employeeService = {};
+
+// 	_employeeService.getEmployee = function(empId){
+// 		if(empId){
+// 			return $http.get(urlBase+"/"+empId);
+// 		}
+// 		return $http.get(urlBase);
+// 	}
+// 	return _employeeService;
+// });

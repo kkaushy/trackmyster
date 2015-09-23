@@ -1,6 +1,21 @@
-<div class="angular-google-map-container">
-	<map zoom="13" center="{{loc[0]}}" map-type-id="TERRAIN">
-  		<shape name="polyline" path={{loc}} geodesic="true" stroke-color="#131540" stroke-opacity="0.5" stroke-weight="5" static=true>  		
-  	</shape>
-  	</map>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+    	<div>
+			<ul>
+				<li ng-repeat="bus in busList" ng-click="getBusRoute(bus)">{{bus.bus_no}}</li>
+			</ul>
+		</div>
+    </div>
+  	<div class="col-md-10">
+  		<div class="angular-google-map-container">
+			<map zoom="14" center="{{loc[0]}}" map-type-id="TERRAIN">		  		
+		  		<directions draggable="false" waypoints={{waypts}} origin="{{loc[0]}}" destination="{{loc[loc.length-1]}} " optimizeWaypoints=false></directions>		  		
+		  	</map>
+		</div>
+  	</div>
+  </div>
 </div>
+
+
